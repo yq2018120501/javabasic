@@ -8,6 +8,6 @@ public class MyCallable implements Callable<String> {
         System.out.println("Ready to work");
         Thread.currentThread().sleep(5000);
         System.out.println("task done");
-        return "thread over";
+        return "thread over ";
     }
 }
