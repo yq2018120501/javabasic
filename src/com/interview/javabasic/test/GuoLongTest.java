@@ -88,16 +88,23 @@ public class GuoLongTest {
          *     in关键字尽量避免使用，因为in是全表扫描
          *   8)数据量太大的话，也可以使用分表分库
          *
-         * 9.单例创建  哪种情况使用double双重检查锁？
-         *
-         *
+         * 9.单例创建  哪种情况使用double双重检查锁？  -->  懒汉式
+         *   饿汉式：
+         *     一进类就先创建对象  私有构造函数  外部调用方法getInstance()
+         *   懒汉式：
+         *     先声明变量  私有构造器  外部调用时 在创建对象
          * 10.springmvc是单例吗？
          *   默认 single
          *   实现多例 @Scope("prototype") 注解即可
          * 11.spring两个特别重要的beanFactory  factoryBean？
-         * 12.shiro创建权限？   5张表
-         * 13.springboot了解多少？
+         *   beanFactory(IOC容器) --> 管理bean生命周期、自动装配、依赖注入等等
+         *   factoryBean --> 用户可以通过实现该接口定制实例化Bean的逻辑
          *
+         * 12.shiro创建权限？   5张表 user、 role、 menu、 user_role、 role_menu、 若有数据权限 data_parems
+         *  shiro权限主要分验证、授权和Realm
+         *
+         * 13.springboot了解多少？
+         *   简化配置  注解   构建独立的微服务单元  内置容器(tomcat...)
          */
     }
 }
